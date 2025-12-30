@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>My Team Webpage</title>
+
+<style>
+
+    /*CSS Reset*/
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    /* ===== BODY ===== */
+    body {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        margin: 0;
+        padding: 0;
+        color: white;
+        background-image: url("images/cloud ops.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    /* ===== MENU ===== */
+    .menu {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        background-color: rgba(0,0,0,0.85);
+        margin: 0;
+        padding: 15px;
+    }
+
+    .menu li {
+        margin: 0 15px;
+    }
+
+    .menu a {
+        text-decoration: none;
+        padding: 10px 20px;
+        background-color: black;
+        color: white;
+        border-radius: 5px;
+        font-weight: bold;
+        display: block;
+
+        /* Smooth hover animation */
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Different hover colors for each menu */
+.menu li:nth-child(1) a:hover {
+    background-color: #97B3CE; /* Home */
+    color: black;
+}
+
+.menu li:nth-child(2) a:hover {
+    background-color: #598559; /* Projects */
+    color: black;
+}
+
+.menu li:nth-child(3) a:hover {
+    background-color: #E4CDA2; /* Team */
+    color: black;
+}
+
+.menu li:nth-child(4) a:hover {
+    background-color: #D2B0D2; /* Contact */
+    color: black;
+}
+
+
+    /* ===== CONTENT DIVS ===== */
+    .content {
+        display: none;
+        padding: 40px;
+        margin: 20px auto;
+        width: 70%;
+        border-radius: 10px;
+        text-align: center;
+
+        /* Animation setup */
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    /* Show only the clicked content */
+    .content:target {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* ===== UNIQUE BACKGROUND COLORS ===== */
+    /* Home */
+    #home {
+        background-color: rgba(151, 179, 206, 0.7);
+    }
+
+    /* Projects */
+    #projects {
+        background-color: rgba(89, 133, 89, 0.7);
+    }
+
+    /* Team */
+    #team {
+        background-color: rgba(228, 205, 162, 0.7);
+    }
+
+    /* Contact */
+    #contact {
+        background-color: rgba(210, 176, 210, 0.7);
+    }
+
+    /* ===== LIST STYLING ===== */
+    ul, ol {
+        text-align: left;
+        display: inline-block;
+    }
+
+    ol {
+        list-style-type: square;
+    }
+</style>
+</head>
+
+<body>
+
+<!-- ===== MENU ===== -->
+<ul class="menu">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#contact">Contact Us</a></li>
+</ul>
+
+<!-- ===== HOME ===== -->
+<div id="home" class="content">
+    <h2>Home</h2>
+    <p>
+        We are a team of Cloud Operations Engineers, DevOps Engineers,
+        STM, SDM, and Shift Leads supporting applications and
+        infrastructure around the clock.
+    </p>
+</div>
+
+<!-- ===== PROJECTS ===== -->
+<div id="projects" class="content">
+    <h2>Projects</h2>
+
+    <p><b>Business Units We Support:</b></p>
+    <ul>
+        <li>Finance</li>
+        <li>HR</li>
+        <li>IT</li>
+    </ul>
+
+    <p><b>Critical Applications:</b></p>
+    <ol>
+        <li>Payroll Application</li>
+        <li>Inventory System</li>
+        <li>Monitoring Platform</li>
+    </ol>
+</div>
+
+<!-- ===== TEAM ===== -->
+<div id="team" class="content">
+    <h2>Team</h2>
+    <ul>
+        <li>John – Cloud Operations Engineer</li>
+        <li>Mary – DevOps Engineer</li>
+        <li>Steve – STM</li>
+        <li>Linda – SDM</li>
+        <li>Mike – Shift Lead</li>
+    </ul>
+</div>
+
+<!-- ===== CONTACT ===== -->
+<div id="contact" class="content">
+    <h2>Contact Us</h2>
+    <p>📞 Phone: +91 234 567 890</p>
+    <p>📧 Email: myteam@example.com</p>
+</div>
+
+</body>
+</html>
